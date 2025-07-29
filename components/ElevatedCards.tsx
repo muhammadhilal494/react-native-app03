@@ -25,7 +25,7 @@ const cardData = [
   { 
     id: 3, 
     title: 'Enterprise', 
-    subtitle: 'Advanced',
+    subtitle: 'Advanced',   
     color: '#DC2626', 
     lightColor: '#FEF2F2',
     textColor: '#FFFFFF',
@@ -54,13 +54,13 @@ const cardData = [
 export default function ElevatedCards() {
   const [activeCard, setActiveCard] = useState(null)
 
-  const handleCardPress = (card) => {
+  const handleCardPress = (card: any) => {
     setActiveCard(activeCard === card.id ? null : card.id)
     console.log(`${card.title} card selected`)
     // Add your navigation or action logic here
   }
 
-  const renderCard = (item, index) => (
+  const renderCard = (item: any, index: any) => (
     <TouchableOpacity
       key={item.id}
       style={[
